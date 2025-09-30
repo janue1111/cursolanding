@@ -18,10 +18,10 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="landing-page">
       <LandingHeader />
-      
-      <main className="container mx-auto px-4">
+
+      <main className="landing-container">
         <HotmartLogo />
         <UserAccessLink />
         <GuaranteeBanner />
@@ -35,11 +35,10 @@ export default function Home() {
         <BenefitsSection />
         <InstructorInfo />
         <FAQSection />
-        <CTAButton />
         <Footer />
       </main>
+
+      <CTAButton />
     </div>
   );
 }
-
-import Image from "next/image";

@@ -2,16 +2,24 @@ import React from 'react';
 
 const HotmartLogo = () => {
   return (
-    <div className="text-center py-4">
-      <a href="https://pay.hotmart.com/G99109427E?checkoutMode=10">
-        <img 
-          src="https://i0.wp.com/blacks.university/wp-content/uploads/2025/06/hotmartuologos.png?fit=565%2C93&ssl=1" 
-          alt="Hotmart Logo" 
-          className="mx-auto"
-          style={{ width: '565px', height: '93px' }}
+    <section className="logo-strip">
+      <div className="logo-strip__row">
+        <img
+          src="https://i0.wp.com/blacks.university/wp-content/uploads/2025/06/universidad-online-logo.png?resize=260%2C80&ssl=1"
+          alt="Universidad Online"
+          className="logo-strip__brand"
         />
-      </a>
-    </div>
+        <span className="logo-strip__separator" aria-hidden="true" />
+        <img
+          src="https://i0.wp.com/blacks.university/wp-content/uploads/2025/06/hotmart-powered-logo.png?resize=260%2C80&ssl=1"
+          alt="Powered by Hotmart"
+          className="logo-strip__brand"
+        />
+      </div>
+      <p className="logo-strip__caption">
+        USAMOS ACTIVOS VIRTUALES COMO HOTMART, REDES SOCIALES Y LA UNIVERSIDAD ONLINE PARA CREAR INGRESOS 100% DIGITALES.
+      </p>
+    </section>
   );
 };
 
