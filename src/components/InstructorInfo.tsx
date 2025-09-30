@@ -1,87 +1,185 @@
 import React from 'react';
 
+const mentors = [
+  {
+    name: 'Mauricio Duque',
+    role: 'Director Blacks.University®',
+    photo: 'https://blacks.university/wp-content/uploads/2025/04/jueves.jpg',
+  },
+  {
+    name: 'Marcos Araujo',
+    role: 'Tráfico Pago',
+    photo: 'https://blacks.university/wp-content/uploads/2025/04/lunes.jpg',
+  },
+  {
+    name: 'Kike Cadena',
+    role: 'Inteligencia Artificial',
+    photo: 'https://blacks.university/wp-content/uploads/2025/04/martes.jpg',
+  },
+  {
+    name: 'Diana Aragón',
+    role: 'Closer Digital Profesional',
+    photo: 'https://blacks.university/wp-content/uploads/2025/04/miercoles.jpg',
+  },
+  {
+    name: 'Nino Scarpato',
+    role: 'Diseño y Crafting Digital',
+    photo: 'https://blacks.university/wp-content/uploads/2025/04/viernes.jpg',
+  },
+];
+
 const InstructorInfo = () => {
   return (
-    <div className="py-8">
-      {/* Imagen del equipo */}
-      <div className="text-center py-4">
-        <a href="https://pay.hotmart.com/G99109427E?checkoutMode=10">
-          <img 
-            loading="lazy" 
-            decoding="async" 
-            src="https://i0.wp.com/blacks.university/wp-content/uploads/2025/05/equipo.jpg?fit=800%2C317&amp;ssl=1" 
-            alt="" 
-            className="mx-auto"
-            style={{ width: '800px', height: '317px' }}
-          />
-        </a>
+    <section className="section-block">
+      <div className="mentors-banner">
+        <h2 className="mentors-banner__heading">MENTORÍA PARA TODA LA VIDA</h2>
+        <span className="section-block__subtext">Hotmart® para toda la vida.</span>
+        <div className="mentor-cards">
+          {mentors.map((mentor) => (
+            <div className="mentor-card" key={mentor.name}>
+              <img className="mentor-card__photo" src={mentor.photo} alt={mentor.name} loading="lazy" />
+              <h4>{mentor.name}</h4>
+              <p>{mentor.role}</p>
+            </div>
+          ))}
+        </div>
       </div>
-      
-      {/* Información de Mauricio Duque */}
-      <div className="py-4">
-        <h1 style={{ textAlign: 'center' }}><strong>¿</strong>Quién es Mauricio Duque y por qué puede ayudarle?</h1>
+
+      <img
+        className="team-photo"
+        loading="lazy"
+        decoding="async"
+        src="https://i0.wp.com/blacks.university/wp-content/uploads/2025/05/equipo.jpg?fit=800%2C317&ssl=1"
+        alt="Equipo Blacks.University"
+      />
+
+      <div className="bio-section">
+        <h3>¿Quién es Mauricio Duque y por qué puede ayudarle?</h3>
         <p>
-          Mauricio Duque lleva 30 años trabajando por Internet y 23 (de los 30) dedicado a la creación y comercialización de educación por Internet.
+          Mauricio Duque lleva 30 años trabajando por Internet y 23 de ellos dedicados a la creación y comercialización de
+          educación en línea.
         </p>
         <p>
-          Mauricio tiene como profesión Administrador de Negocios de la Universidad de Sanbuenaventura Cali, <span style={{ textDecoration: 'underline' }}><span style={{ color: '#33cccc', textDecoration: 'underline' }}><a style={{ color: '#33cccc', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2025/05/Andes.jpg">especialista en eCommerce de la Universidad de Los Andes,</a></span></span> Especialista en derecho de las Telecomunicaciones y TICs en Colombia.
+          Es Administrador de Negocios de la Universidad de Sanbuenaventura Cali y{' '}
+          <a href="https://blacks.university/wp-content/uploads/2025/05/Andes.jpg" target="_blank" rel="noopener">
+            especialista en eCommerce de la Universidad de Los Andes
+          </a>{' '}
+          además de especialista en Derecho de las Telecomunicaciones y TICs en Colombia.
         </p>
         <p>
-          Cuenta con múltiples certificaciones, cursos, talleres, seminarios e iniciativas muy existosas en la industria de la creación y comercialización de educación por Internet en habla hispana.
+          Cuenta con múltiples certificaciones, cursos, talleres y seminarios exitosos en la industria de la educación digital
+          en habla hispana.
         </p>
         <p>
-          Mauricio a creado proyectos como Seminarios.Online® alcanzando una facturación record de más de 77 millones de dólares (GMV) en poco más de 4 años y Universidad.Online® que hoy en día tiene más de 150 mil estudiantes activos.
+          Mauricio ha creado proyectos como Seminarios.Online® alcanzando una facturación récord de más de 77 millones de dólares
+          (GMV) en poco más de 4 años y Universidad.Online® con más de 150 mil estudiantes activos.
         </p>
         <p>
-          Actualmente lidera el proyecto Universidad.Online® y Blacks.University®, que búsca promover la técnica de la afiliación como modelo de negocio y trabajo como solución a la empleabilidad en países de habla hispana.
+          Actualmente lidera Universidad.Online® y Blacks.University®, promoviendo la afiliación como modelo de negocio y
+          respuesta a la empleabilidad en países de habla hispana.
         </p>
       </div>
-      
-      {/* Premios de Mauricio Duque */}
-      <div className="py-4">
-        <h1 style={{ textAlign: 'center' }}>Mauricio Duque ha recibido 14 premios Hotmart®:</h1>
+
+      <div className="bio-section">
+        <h3>Mauricio Duque ha recibido 14 premios Hotmart®</h3>
         <ul>
-          <li><span style={{ textDecoration: 'underline' }}><span style={{ color: '#33cccc', textDecoration: 'underline' }}><a style={{ color: '#33cccc', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2025/04/fotoPremios.jpg">3 Premios Hotmart® Galaxy 3 años consecutivos.</a></span></span></li>
-          <li><span style={{ textDecoration: 'underline' }}><span style={{ color: '#33cccc', textDecoration: 'underline' }}><a style={{ color: '#33cccc', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2025/04/fotoPremios.jpg">6 Premios Hotmart® Black (Para 1.200.000 dólares de ingreso neto).</a></span></span></li>
-          <li><span style={{ textDecoration: 'underline' }}><span style={{ color: '#33cccc', textDecoration: 'underline' }}><a style={{ color: '#33cccc', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2025/04/fotoPremios.jpg">3 Premios Hotmart® Moon (Para 3 millones de dólares de ingreso neto).</a></span></span></li>
-          <li><span style={{ textDecoration: 'underline' }}><span style={{ color: '#33cccc', textDecoration: 'underline' }}><a style={{ color: '#33cccc', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2025/04/fotoPremios.jpg">2 Premios Hotmart® Venus (Para 4 millones de dólares de ingreso neto).</a></span></span></li>
+          <li>
+            <a href="https://blacks.university/wp-content/uploads/2025/04/fotoPremios.jpg" target="_blank" rel="noopener">
+              3 Premios Hotmart® Galaxy por 3 años consecutivos
+            </a>
+          </li>
+          <li>
+            <a href="https://blacks.university/wp-content/uploads/2025/04/fotoPremios.jpg" target="_blank" rel="noopener">
+              6 Premios Hotmart® Black (1.200.000 dólares de ingreso neto)
+            </a>
+          </li>
+          <li>
+            <a href="https://blacks.university/wp-content/uploads/2025/04/fotoPremios.jpg" target="_blank" rel="noopener">
+              3 Premios Hotmart® Moon (3 millones de dólares de ingreso neto)
+            </a>
+          </li>
+          <li>
+            <a href="https://blacks.university/wp-content/uploads/2025/04/fotoPremios.jpg" target="_blank" rel="noopener">
+              2 Premios Hotmart® Venus (4 millones de dólares de ingreso neto)
+            </a>
+          </li>
         </ul>
       </div>
-      
-      {/* Reconocimientos y eventos */}
-      <div className="py-4">
+
+      <div className="bio-section">
         <p>
-          Mauricio Duque Zuluaga también ha sido invitado como conferencista en <span style={{ color: '#3366ff' }}><a style={{ color: '#3366ff' }} href="https://blacks.university/wp-content/uploads/2025/04/mdz.jpg"><span style={{ textDecoration: 'underline' }}><span style={{ color: '#33cccc', textDecoration: 'underline' }}>múltiples eventos internacionales y congresos a nivel mundial</span>.</span></a></span> Muchos medios de comunicación de varios países han destacado su trabajo y su trayectoria. Por ejemplo: <span style={{ textDecoration: 'underline', color: '#33cccc' }}><span style={{ textDecoration: 'underline' }}><a style={{ color: '#33cccc', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2025/04/forbes.jpg">Forbes</a></span></span>, <span style={{ color: '#3366ff' }}><span style={{ color: '#33cccc' }}><a style={{ color: '#33cccc' }} href="https://blacks.university/wp-content/uploads/2025/04/europapress.jpg"><span style={{ textDecoration: 'underline' }}>EuropaPress</span>,</a> </span><a style={{ color: '#3366ff' }} href="https://blacks.university/wp-content/uploads/2024/10/rs.jpg"><span style={{ textDecoration: 'underline' }}><span style={{ color: '#33cccc', textDecoration: 'underline' }}>Revista Semana</span></span></a></span> en Colombia, <span style={{ textDecoration: 'underline', color: '#33cccc' }}><a style={{ color: '#33cccc' }} href="https://blacks.university/wp-content/uploads/2025/04/espectador.jpg"><span style={{ textDecoration: 'underline' }}>Diario El Espectador</span></a> </span>en Colombia, <span style={{ textDecoration: 'underline' }}><span style={{ color: '#3366ff' }}><a style={{ color: '#3366ff', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2024/10/mercurio.jpg"><span style={{ color: '#33cccc', textDecoration: 'underline' }}>Diario El Mercurio en Chile</span></a></span></span>, <span style={{ textDecoration: 'underline' }}><span style={{ color: '#3366ff' }}><a style={{ color: '#3366ff', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2024/10/yahoo.jpg"><span style={{ color: '#33cccc', textDecoration: 'underline' }}>Yahoo Finanzas para Latam</span></a></span></span>, <span style={{ textDecoration: 'underline' }}><span style={{ color: '#3366ff' }}><a style={{ color: '#3366ff', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2024/10/emprendedoresdehoy.jpg"><span style={{ color: '#33cccc', textDecoration: 'underline' }}>Revista Emprendedores de Hoy</span></a></span></span> en México, <span style={{ textDecoration: 'underline', color: '#33cccc' }}><a style={{ color: '#33cccc', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2024/10/ccc.jpg">Cámara de Comercio de Cali</a></span> entre muchas otras.
+          Mauricio Duque Zuluaga ha sido invitado como conferencista en{' '}
+          <a href="https://blacks.university/wp-content/uploads/2025/04/mdz.jpg" target="_blank" rel="noopener">
+            múltiples eventos internacionales y congresos
+          </a>
+          . Su trabajo ha sido destacado en medios como{' '}
+          <a href="https://blacks.university/wp-content/uploads/2025/04/forbes.jpg" target="_blank" rel="noopener">
+            Forbes
+          </a>
+          ,{' '}
+          <a href="https://blacks.university/wp-content/uploads/2025/04/europapress.jpg" target="_blank" rel="noopener">
+            EuropaPress
+          </a>
+          ,{' '}
+          <a href="https://blacks.university/wp-content/uploads/2024/10/rs.jpg" target="_blank" rel="noopener">
+            Revista Semana
+          </a>
+          ,{' '}
+          <a href="https://blacks.university/wp-content/uploads/2025/04/espectador.jpg" target="_blank" rel="noopener">
+            Diario El Espectador
+          </a>
+          ,{' '}
+          <a href="https://blacks.university/wp-content/uploads/2024/10/mercurio.jpg" target="_blank" rel="noopener">
+            Diario El Mercurio (Chile)
+          </a>
+          ,{' '}
+          <a href="https://blacks.university/wp-content/uploads/2024/10/yahoo.jpg" target="_blank" rel="noopener">
+            Yahoo Finanzas Latam
+          </a>{' '}
+          y{' '}
+          <a href="https://blacks.university/wp-content/uploads/2024/10/emprendedoresdehoy.jpg" target="_blank" rel="noopener">
+            Revista Emprendedores de Hoy
+          </a>
+          , entre otros.
         </p>
         <p>
-          Mauricio Duque recibió el <span style={{ textDecoration: 'underline' }}><span style={{ color: '#33cccc', textDecoration: 'underline' }}><a style={{ color: '#33cccc', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2025/05/photo_2022-12-04_11-18-51.jpg">premio 40 en 7</a></span></span> por lograr una facturación de más de 1 millón de dólares en 7 días durante 11 meses consecutivos.
+          Recibió el{' '}
+          <a href="https://blacks.university/wp-content/uploads/2025/05/photo_2022-12-04_11-18-51.jpg" target="_blank" rel="noopener">
+            premio 40 en 7
+          </a>{' '}
+          por facturar más de 1 millón de dólares en 7 días durante 11 meses consecutivos.
         </p>
         <p>
-          Además Mauricio Duque es parte del equipo de las 25 empresas más grandes del mundo en el mercado de Hotmart®. Ha recibido el premio <span style={{ textDecoration: 'underline', color: '#33cccc' }}><a style={{ color: '#33cccc', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2025/05/galaxy.jpg">Hotmart® Galaxy</a></span> durante 3 años consecutivos.
+          Además, es parte del selecto grupo de las 25 empresas más grandes del mundo en el mercado de Hotmart® y ha recibido el{' '}
+          <a href="https://blacks.university/wp-content/uploads/2025/05/galaxy.jpg" target="_blank" rel="noopener">
+            premio Hotmart® Galaxy
+          </a>{' '}
+          durante 3 años consecutivos.
         </p>
       </div>
-      
-      {/* Video y reconocimientos adicionales */}
-      <div className="py-4">
-        <div className="text-center py-4">
-          <div className="elementor-wrapper elementor-open-inline mx-auto" style={{ maxWidth: '800px' }}>
-            <iframe 
-              className="elementor-video-iframe" 
-              allowFullScreen 
-              allow="clipboard-write" 
-              title="Reproductor de vídeo videopress" 
-              src="https://videopress.com/embed/VPepnCAO?at&amp;controls=1&amp;autoPlay=0&amp;muted=0&amp;loop=0&amp;playsinline=0"
-              style={{ width: '100%', height: '450px' }}
-            ></iframe>
-          </div>
+
+      <div className="bio-section">
+        <div className="media-frame">
+          <iframe
+            allowFullScreen
+            allow="clipboard-write"
+            title="Reproductor de vídeo videopress"
+            src="https://videopress.com/embed/VPepnCAO?at&controls=1&autoPlay=0&muted=0&loop=0&playsinline=0"
+          ></iframe>
         </div>
-        <div className="py-4">
-          <p style={{ textAlign: 'center' }}>
-            Mauricio también ha recibido los premios <span style={{ textDecoration: 'underline' }}><span style={{ color: '#33cccc', textDecoration: 'underline' }}><a style={{ color: '#33cccc', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2025/05/galaxy.jpg">Hotmart® Galaxy</a></span></span> y <span style={{ textDecoration: 'underline' }}><span style={{ color: '#33cccc', textDecoration: 'underline' }}><a style={{ color: '#33cccc', textDecoration: 'underline' }} href="https://blacks.university/wp-content/uploads/2025/05/photo_2024-07-09_21-01-08.jpg">Hotmart® Explorers</a></span></span> por su facturación transformación y desempeño en el mercado de habla hispana.
-          </p>
-        </div>
+        <p>
+          Mauricio también ha recibido los premios{' '}
+          <a href="https://blacks.university/wp-content/uploads/2025/05/galaxy.jpg" target="_blank" rel="noopener">
+            Hotmart® Galaxy
+          </a>{' '}
+          y{' '}
+          <a href="https://blacks.university/wp-content/uploads/2025/05/photo_2024-07-09_21-01-08.jpg" target="_blank" rel="noopener">
+            Hotmart® Explorers
+          </a>{' '}
+          por su transformación y desempeño en el mercado de habla hispana.
+        </p>
       </div>
-    </div>
+    </section>
   );
 };
 
